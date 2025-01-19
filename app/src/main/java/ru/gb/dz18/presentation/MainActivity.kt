@@ -2,7 +2,6 @@ package ru.gb.dz18.presentation
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import ru.gb.dz18.MainFragment
 import ru.gb.dz18.R
 import ru.gb.dz18.databinding.ActivityMainBinding
 

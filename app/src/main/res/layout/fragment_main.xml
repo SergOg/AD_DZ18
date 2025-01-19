@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainFragment">
+    tools:context=".presentation.MainFragment">
 
     <androidx.camera.view.PreviewView
         android:id="@+id/viewFinder"
@@ -18,7 +18,7 @@
         android:id="@+id/take_photo_button"
         android:layout_width="150dp"
         android:layout_height="50dp"
-        android:layout_marginBottom="50dp"
+        android:layout_marginBottom="24dp"
         android:text="Take a photo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

@@ -1,13 +1,11 @@
-package ru.gb.dz18
+package ru.gb.dz18.presentation
 
 import android.Manifest
 import android.content.ContentValues
 import android.content.pm.PackageManager
 import android.os.Build
-import androidx.fragment.app.viewModels
 import android.os.Bundle
 import android.provider.MediaStore
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -19,11 +17,12 @@ import androidx.camera.core.ImageCaptureException
 import androidx.camera.core.Preview
 import androidx.camera.lifecycle.ProcessCameraProvider
 import androidx.core.content.ContextCompat
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import ru.gb.dz18.data.App
 import ru.gb.dz18.databinding.FragmentMainBinding
-import ru.gb.dz18.presentation.MainViewModel
 import java.text.SimpleDateFormat
 import java.util.Locale
 import java.util.concurrent.Executor
@@ -94,12 +93,11 @@ class MainFragment : Fragment() {
         }
 
         val outputOptions = context?.let {
-            ImageCapture.OutputFileOptions
-                .Builder(
-                    it.contentResolver,
-                    MediaStore.Images.Media.EXTERNAL_CONTENT_URI,
-                    contentValues
-                )
+            ImageCapture.OutputFileOptions.Builder(
+                it.contentResolver,
+                MediaStore.Images.Media.EXTERNAL_CONTENT_URI,
+                contentValues
+            )
                 .build()
         }
 
